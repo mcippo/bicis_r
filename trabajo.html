@@ -359,8 +359,8 @@ MEJORAS</h1>
 <h2>Índice</h2>
 <ul>
 <li><a href="#introducción">Introducción</a></li>
-<li><a href="#metodología">Objetivos</a></li>
-<li><a href="#resultados">Metodología</a></li>
+<li><a href="#objetivos">Objetivos</a></li>
+<li><a href="#metodología">Metodología</a></li>
 </ul>
 </div>
 <div id="introducción" class="section level2">
@@ -392,18 +392,66 @@ márgenes de ganancia del Gobierno y la empresa a cargo de la
 conseción.</p>
 <p>Establecido dicho norte, se buscará realizar un estudio que de cuenta
 tanto del volumen de la utilización de ECOBICI como del perfil de los
-usuarios/viajes realizados. Esto permitirá profundizar qué perfiles
-están subexplotados (perfiles que no utilizan el servicio, ante los
-cuales cabría profundizar las publicidades); mientras que el
-conocimiento de los viajes realizados permitirá establecer estrategias
-para su potencial arancelamiento en el futuro.</p>
+usuarios/viajes realizados. Esto permitirá llevar a cabo acciones
+orientadas a <strong>aumentar la utilización del servicio y establecer
+estrategias para su potencial arancelamiento en el futuro.</strong></p>
 <p>Si bien este trabajo parte de una situación hipotética, los
 principales insumos prevendrán de bases de datos de ECOBICI en el sitio
 de <a href="https://data.buenosaires.gob.ar/">datos abiertos del
 GCBA</a>.</p>
+<p>El grueso de los campos y registros procesados provendrán de las
+bases del dataset de datos abiertos GCBA, sin embargo, se incluirán
+campos ficticios, con el fin de poder profundizar el uso de SQL. Cuando
+esto suceda, será debidamente aclarada.</p>
 </div>
 <div id="objetivos" class="section level2">
 <h2>Objetivos</h2>
+<p>A través del uso del herramental ofrecido por SQL en las bases de
+datos mencionadas, se buscará:</p>
+<ul>
+<li><p>Describir el perfil de los usuarios de ECOBICI (sexo, edad, con
+la posibilidad de incluir el campo <em>residencia</em>).</p></li>
+<li><p>Calcular el volumen de usuarios / recorridos realizados y su
+evolución en el tiempo</p></li>
+<li><p>Caracterizar los recorridos realizados (barrio y estación de
+origen, momento en el que se realizó el viaje, duración temporal,
+distancia recorrida).</p></li>
+<li><p>Evaluar el desempeño de los modelos de ECOBICI ofrecidas (el
+campo de calificación del viaje será ficticio)</p></li>
+<li><p>Relacionar perfiles de usuario con volumen de uso de ECOBICI, con
+el fin de desarrollar estrategías de penetración del servicio.</p></li>
+<li><p>Estimar el volumen de ingresos generados por la ECOBICI en caso
+de haber sido un servicio tarifado en 2024.</p></li>
+</ul>
+</div>
+<div id="tablas-a-presentar-en-la-primera-entrega" class="section level2">
+<h2>Tablas a presentar en la primera entrega:</h2>
+<p>En esta primera entrega, se generaran las siguientes tablas:</p>
+<p>** GENERO:**</p>
+<table>
+<thead>
+<tr class="header">
+<th align="left">Nombre Campo</th>
+<th align="center">Abreviatura</th>
+<th align="center">Tipo de datos</th>
+<th align="center">Tipo de clave</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">id del usuario</td>
+<td align="center">id_genero</td>
+<td align="center">INT PRIMARY KEY NOT NULL</td>
+<td align="center">PK</td>
+</tr>
+<tr class="even">
+<td align="left">genero</td>
+<td align="center">genero_usuario</td>
+<td align="center">VARCHAR (10)</td>
+<td align="center">-</td>
+</tr>
+</tbody>
+</table>
 </div>
 <div id="metodología" class="section level2">
 <h2>Metodología</h2>

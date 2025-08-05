@@ -5,7 +5,7 @@
 **/*.pdf
 **/*.rds
 **/*.geojson
-
+**/*.zip
 
 ### AL ###
 #Template for AL projects for Dynamics 365 Business Central
