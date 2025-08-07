@@ -1,10 +1,11 @@
+
 # ECOBICIS EN CABA: PRINCIPALES CARACTERÍSTICAS Y POTENCIALES MEJORAS
 
 ## Índice
 
 - [Introducción](#introducción)
 - [Objetivos](#objetivos)
-- [Metodología](#metodología)
+- [Tablas a presentar en la primera entrega:](#Tablas a presentar en la primera entrega:)
 
 ## Introducción
 
@@ -49,18 +50,107 @@ A través del uso del herramental ofrecido por SQL en las bases de datos mencion
 
 En esta primera entrega, se generaran las siguientes tablas:
 
- ** GENERO:** 
+ **GENERO:** 
 
 
 | Nombre Campo  | Abreviatura | Tipo de datos | Tipo de clave  |
 |:--------------|:-----------:|:-------------:|:--------------:|
-| id  del usuario | id_genero | INT PRIMARY KEY NOT NULL| PK|
+| id  del genero | id_genero | INT PRIMARY KEY NOT NULL| PK|
 | genero  | genero_usuario | VARCHAR (10) | -      |
 
 
 
+ **USUARIOS:** 
 
-## Metodología
+
+| Nombre Campo  | Abreviatura | Tipo de datos | Tipo de clave  |
+|:--------------|:-----------:|:-------------:|:--------------:|
+| id  del usuario | id_usuario | INT PRIMARY KEY NOT NULL| PK|
+| id del genero  | genero_usuario | VARCHAR (10) | FK      |
+| edad  | edad_usuario | INT NOT NULL | -      |
+| fecha de inscripción en ECOBICI  | fecha_alta | DATE NOT NULL | -      |
+| hora de la fecha del alta  | hora_alta | TIME | -      |
+
+
+ **COMUNA:** 
+
+
+| Nombre Campo  | Abreviatura | Tipo de datos | Tipo de clave  |
+|:--------------|:-----------:|:-------------:|:--------------:|
+| id  de la comuna | id_comuna | INT NOT NULL| PK|
+| nombre de la comuna  | nombre_comuna | VARCHAR (10) NOT NULL |  -     |
+
+
+ **BARRIO:** 
+
+
+| Nombre Campo  | Abreviatura | Tipo de datos | Tipo de clave  |
+|:--------------|:-----------:|:-------------:|:--------------:|
+| id  del barrio | id_barrio | INT | PK|
+| nombre del barrio  | nombre_barrio | VARCHAR (40) | - | 
+| id  de la comuna  | id_comuna | INT |  FK     |
+| cantidad de habitantes del barrio  | poblacion | INT |  -     |
+| cantidad de habitantes mujeres del barrio  | poblacion_fem | INT |  -     |
+| cantidad de habitantes varones del barrio  | poblacion_masc | INT |  -     |
+
+
+ **ESTACIONES:** 
+
+
+| Nombre Campo  | Abreviatura | Tipo de datos | Tipo de clave  |
+|:--------------|:-----------:|:-------------:|:--------------:|
+| id  de la estacion de bici | id_estacion | INT | PK|
+| nombre de la estación  | nombre | VARCHAR (40) | - | 
+| dirección de la estación  | direccion | VARCHAR (60) |  FK     |
+| id del barrio  | id_barrio | INT |  FK     |
+| longitud de la estación  | long_estacion | DECIMAL(9,6) |  -     |
+| latitud de la estación  | lat_estacion | INT |  (9,6)     |
+
+ **MODELO:** 
+
+
+| Nombre Campo  | Abreviatura | Tipo de datos | Tipo de clave  |
+|:--------------|:-----------:|:-------------:|:--------------:|
+| id  del modelo de la bici | id_modelo | INT | PK |
+| nombre del modelo de la bici  | modelo | VARCHAR (10) | - | 
+
+
+ **MESES:** 
+
+
+| Nombre Campo  | Abreviatura | Tipo de datos | Tipo de clave  |
+|:--------------|:-----------:|:-------------:|:--------------:|
+| id  del mes | id_mes | INT | PK |
+| nombre del mes del año  | mes | VARCHAR (15) | - | 
+
+
+
+ **PRECIOS:** 
+
+
+| Nombre Campo  | Abreviatura | Tipo de datos | Tipo de clave  |
+|:--------------|:-----------:|:-------------:|:--------------:|
+| id  del precio | id_precio | INT | PK |
+| precio sugerido por el cobro del servicio  | precio | INT | - | 
+
+
+
+ **RECORRIDOS:** 
+
+
+| Nombre Campo  | Abreviatura | Tipo de datos | Tipo de clave  |
+|:--------------|:-----------:|:-------------:|:--------------:|
+| id  de la estacion de bici | id_recorrido | INT | PK|
+| id del usuario  | idx_usuario | INT | FK | 
+| id de la estacion de origen  | idx_estacion_orig | INT |  FK     |
+| id del mes en que se produce el recorrido  | idx_mes | INT |  FK     |
+| fecha en que se retira la bici  | fecha_origen | DATETIME |  -     |
+| id de la estacion de destino  | idx_estacion_dest | INT |  -     |
+| fecha y hora en que se produce el retiro  | fecha_dest | DATETIME | -     |
+| id del modelo de la bici utilizada  | idx_modelo | INT | FK     |
+| calificación de la experiencia de uso de la bici  | calificacion | INT | -     |
+| id del precio que se debería haber pagado por la bici  | idx_precio | INT | FK     |
+
 
 
 
