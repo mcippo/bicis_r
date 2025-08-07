@@ -1,11 +1,18 @@
 
+# CONTENIDO DEL REPOSITORIO:
+
+
+
+
+
 # ECOBICIS EN CABA: PRINCIPALES CARACTERÍSTICAS Y POTENCIALES MEJORAS
 
 ## Índice
 
 - [Introducción](#introducción)
 - [Objetivos](#objetivos)
-- [Tablas a presentar en la primera entrega:](#Tablas a presentar en la primera entrega:)
+- [Primeras tablas](#primeras-tablas)
+- [Resultados esperados](#resultados-esperados)
 
 ## Introducción
 
@@ -45,8 +52,10 @@ A través del uso del herramental ofrecido por SQL en las bases de datos mencion
  
  * Estimar el volumen de ingresos generados por la ECOBICI en caso de haber sido un servicio tarifado en 2024.
 
+## Primeras tablas
 
-## Tablas a presentar en la primera entrega:
+
+## Tablas a presentar en la primera entrega
 
 En esta primera entrega, se generaran las siguientes tablas:
 
@@ -152,5 +161,25 @@ En esta primera entrega, se generaran las siguientes tablas:
 | id del precio que se debería haber pagado por la bici  | idx_precio | INT | FK     |
 
 
+## Resultados esperados
 
+A través de la utilización de las bases mencionadas, a priori (ya que a futuro se irán modificando los objetivos o sumando nuevas propuestas), se espera realizar vía SQL las siguientes consultas / vistas:
 
+ * Cantidad de usuarios por sexo
+ * Cantidad de usuarios por edad
+ * Recorridos por sexo
+ * Recorridos por edad
+ * Cantidad de recorridos por estación
+ * Cantidad de recorridos por barrio
+ * Calificación del recorrido por estación
+ * Recorridos por tipo de modelo de bicicleta utilizada
+ * Calificación promedio otorgada a por modelo de bicleta
+ * Ingresos que se podrían haber generado por la utilización del servicio por barrio
+ * Ingresos que se podrían haber generado por la utilización del servicio por estación
+ * Usuarios que hubiesen gastado más en el servicio (se podrá selecciónar a los quintiles más altos)
+ 
+ A futuro, se incorporarán consultas que implicarán el cruce de una mayor cantidad de variables, como por ejemplo cantidad de recorridos por sexo, según estación.
+ 
+ 
+ 
+ 
